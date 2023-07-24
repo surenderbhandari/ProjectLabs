@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "email": "user1@example.com",
+      "password": "1234"
+    },
+    {
+      "email": "user2@example.com",
+      "password": "hashed_password_2"
+    },
+    {
+      "firstName": "LK",
+      "secondName": "Lakm",
+      "phoneNo": "9417982",
+      "email": "ajayg.bathini@gmail.com",
+      "password": "ajaygoud",
+      "Gender": "Male",
+      "Terms": ""
+    },
+    {
+      "firstName": "Surender",
+      "secondName": "Bhandari",
+      "phoneNo": "9381774602",
+      "email": "surenderbandari1228@gmail.com",
+      "password": "123456",
+      "Gender": "Male",
+      "Terms": ""
+    }
+  ]
+}
