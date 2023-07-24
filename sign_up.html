@@ -1,0 +1,145 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="style_login.css">
+	<link rel="stylesheet" href="styles_signUp.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="./scripts/user_update.js"></script>
+	<script src="./backend/login_details.js"></script>
+	<style>
+		.bttn {
+			width: 50%;
+			background-color: #ff6600;
+		}
+	</style>
+	<script>
+		function submitForm() {
+			const form = document.getElementById("myForm");
+			const formData = new FormData(form);
+
+			// Convert form data to a plain object
+			const projectData = {};
+			formData.forEach((value, key) => {
+				projectData[key] = value;
+			});
+
+			// Send the data to the server
+			fetch('http://localhost:3000/register', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(projectData),
+			})
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					alert("Form submitted successfully!");
+					form.reset();
+				})
+				.catch(error => {
+					console.error('Error:', error);
+					alert("An error occurred while submitting the form.");
+				});
+		}
+	</script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="navbar">
+			<div class="icon">
+				<h2 class="logo">ProjectLabss</h2>
+			</div>
+
+			<div class="menu">
+				<ul>
+					<li><a href="main.html">HOME</a></li>
+					<li><a href="upload.html">UPLOAD</a></li>
+					<li><a href="find.html">FIND</a></li>
+					<li><a href="about-us.html">ABOUT</a></li>
+					<li><a href="contact-page.html">CONTACT</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="content">
+			<h1>Sign Up <br><span>Project Atlas <br></span>Stop waiting for ideas,<br> <span>find them here</span></h1>
+			<p class="par">Hello Enthusiasts, find the problem statements and project ideas.
+				Find new and <br> existing projects and problem statements that your seniors and college peers have
+				done.
+				<br>Move on, stop waiting for ideas<br> Start finding them here.
+			</p>
+
+		</div>
+		<!-- Body of Form starts -->
+		<div class="container">
+			<form method="post" autocomplete="on" id="myForm">
+				<!--First name-->
+				<div class="box">
+					<label for="firstName" class="fl fontLabel"> First Name: </label>
+					<div class="new iconBox">
+						<i class="fa fa-user" aria-hidden="true"></i>
+					</div>
+					<div class="fr">
+						<input type="text" name="firstName" placeholder="First Name" class="textBox" autofocus="on"
+							required id="feild1" value="">
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="box">
+					<label for="secondName" class="fl fontLabel"> Seconed Name: </label>
+					<div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+					<div class="fr">
+						<input type="text" required name="secondName" placeholder="Last Name" class="textBox"
+							id="feild2" value="">
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="box">
+					<label for="phone" class="fl fontLabel"> Phone No.: </label>
+					<div class="fl iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+					<div class="fr">
+						<input type="text" required name="phoneNo" maxlength="10" placeholder="Phone No."
+							class="textBox" id="feild3" value="">
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="box">
+					<label for="email" class="fl fontLabel"> Email ID: </label>
+					<div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+					<div class="fr">
+						<input type="email" required name="email" placeholder="Email Id" class="textBox" id="feild4"
+							value="">
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="box">
+					<label for="password" class="fl fontLabel"> Password </label>
+					<div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+					<div class="fr">
+						<input type="Password" required name="password" placeholder="Password" class="textBox"
+							id="feild5" value="">
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="box radio">
+					<label for="gender" class="fl fontLabel"> Gender: </label>
+					<input type="radio" name="Gender" value="Male" required id="feild6"> Male &nbsp; &nbsp; &nbsp;
+					&nbsp;
+					<input type="radio" name="Gender" value="Female" required id="feild7"> Female
+				</div>
+				<div class="box terms">
+					<input type="checkbox" name="Terms" required id="feild8" value=""> &nbsp; I accept the terms and
+					conditions
+				</div>
+				<button type="button" onclick="submitForm()">Submit</button>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>

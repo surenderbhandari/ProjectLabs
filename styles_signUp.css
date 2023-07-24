@@ -1,0 +1,112 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+  background: url(http://wrbbradio.org/wp-content/uploads/2016/10/grey-background-07.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+.container{
+	width: 100%;
+    background-color:rgb(43, 36, 36);
+    border-radius: 5%;
+    /* background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(image.jpg); */
+	width: 350px;
+	height: 400px;
+	padding-bottom: 20px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+    margin-inline-start: 50ch;
+    padding: 70px 50px 20px 50px;
+}
+
+
+.fl{
+	float: left;
+  width: 110px;
+  line-height: 35px;
+}
+
+.fontLabel{
+  color: #f9f5f3;
+  font-size: 13px;
+}
+
+.fr{
+	float: right;
+}
+
+.clr{
+	clear: both;
+}
+
+.box{
+	width: 360px;
+	height: 35px;
+	margin-top: 10px;
+	font-family: verdana;
+	font-size: 12px;
+}
+
+.textBox{
+	height: 35px;
+	width: 190px;
+    padding-left: 20px;
+	background-color: grey;
+	border:0.6px solid darkorange;
+}
+
+.new{
+  float: left;
+}
+
+.iconBox{
+	height: 35px;
+	width: 40px;
+	line-height: 38px;
+	text-align:end;
+	color: #f26507;
+	padding-top: 0.255cm;
+}
+
+.radio{
+    border-radius: 0.2cm;
+    padding-left:1%;
+	color: white;
+	background: #f26507;
+	line-height: 38px;
+}
+
+.terms{
+	line-height: 35px;
+	text-align: center;
+    border-radius: 0.2cm;
+    padding-left:1%;
+    /* margin-top: 3%; */
+	color: white;
+	background: #f26507;
+	color: white;
+}
+
+.submit{
+	float: right;
+	border: none;
+	color: white;
+	width: 110px;
+	height: 35px;
+	text-transform: uppercase;
+    cursor: pointer;
+}
+
+input{
+    border-radius: 0.3cm;
+}
+.btnn{
+	background-color: wheat;
+	margin-left: 17%;
+}
+

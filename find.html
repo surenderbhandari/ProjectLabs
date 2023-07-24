@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>find_problem_statements</title>
+  <link rel="stylesheet" href="style_login.css" />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .btn1 {
+      width: 100px;
+      height: 40px;
+      background: #ff7200;
+      border: 2px solid #ff7200;
+      margin-top: 13px;
+      color: #fff;
+      font-size: 15px;
+      border-radius: 3px;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn1:hover {
+      color: #000;
+    }
+
+    .btn1:focus {
+      outline: none;
+    }
+  </style>
+  <script>
+    function getName() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("srchid");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("table");
+      tr = table.getElementsByTagName("tr");
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+
+    function getTitle() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("srchid");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("table");
+      tr = table.getElementsByTagName("tr");
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[2];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+
+    function getTech() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("srchid");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("table");
+      tr = table.getElementsByTagName("tr");
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[3];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+
+    function getDesc() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("srchid");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("table");
+      tr = table.getElementsByTagName("tr");
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[4];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+
+    function getCategory() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("srchid");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("table");
+      tr = table.getElementsByTagName("tr");
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[5];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="navbar">
+      <div class="icon">
+        <h2 class="logo">ProjectLabs</h2>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="main.html">HOME</a></li>
+          <li><a href="failed_login.html">UPLOAD</a></li>
+          <li><a href="find.html">FIND</a></li>
+          <li><a href="about-us.html">ABOUT</a></li>
+          <li><a href="contact-page.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="search">
+        <input class="srch" type="search" name="" placeholder="Search by name..." value="" id="srchid"
+          onkeyup="getName()" />
+        <button class="btn" onclick="getTitle()">Search by title</button>
+        <button class="btn1" onclick="getTech()">Search by technology</button>
+        <button class="btn1" onclick="getDesc()">Search by description</button>
+        <button class="btn1" onclick="getCategory()">Search by Category</button>
+      </div>
+    </div>
+
+    <div class="app_container">
+      <table id="table">
+        <thead>
+          <tr>
+            <th class="first">Id</th>
+            <th class="second">Name</th>
+            <th class="third">Title</th>
+            <th class="fourth">Technology</th>
+            <th class="fifth">Description</th>
+            <th class="sixth">Category</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="first">1</td>
+            <td class="second">Zahid Parvez</td>
+            <td class="third">
+              <a href="https://github.com/zahid-parvez/blockchain-health-care-prototype">Hosting a blockchain code on to
+                a cloud network in order to
+                create a prototype app in the Healthcare sector</a>
+            </td>
+            <td class="fourth">React,MySQL</td>
+            <td class="fifth">
+              providing an application which can be used through mobile
+              phones, computers or tablets. We are currently at the phase
+              where we have the codes developed and the designs for the app,
+              but need help with hosting it on the cloud and building the
+              prototype. All support and assistance will be provided for the
+              same.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">2</td>
+            <td class="second">John</td>
+            <td class="third"><a href="https://github.com/Sharmakartik1942">Runtime remote video
+                quality assessment</a></td>
+            <td class="fourth">Python GUI, MongoDB</td>
+            <td class="fifth">
+              interactive video communication over limited bandwidth channel
+              and variable user end configuration has concern of video
+              quality. Different VSAT terminals may have different computing
+              resources i.e. RAM, graphics card, local network issues, not
+              properly optimized VSAT setup affecting BER, Receive power etc.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">3</td>
+            <td class="second">Emma</td>
+            <td class="third"><a
+                href="https://github.com/dingzhaohan/paperswithcode/blob/daf44ad2753d2aa4b8e8659b365851029c8227eb/day3/research.ipynb">Video
+                metadata generation & classification</a></td>
+            <td class="fourth">Django,SQL,HTML,CSS</td>
+            <td class="fifth">
+              Video documentaries of various ISRO missions and programs are
+              available. To categorize the all-video programs, generation &
+              verification of huge amount of metadata generation need to be
+              done. With current Deep learning methods-based development in
+              field of Computer vision and Natural Language Processing this
+              task of video metadata generation is now days automated. Given
+              Video programs, process for objects, text, speech recognition,
+              Named Entity recognition etc. to classify the videos in
+              different genres like launch programs, interviews, educational
+              programs, outdoor shots, public shots, traffic etc.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">4</td>
+            <td class="second">Aparna</td>
+            <td class="third">
+              <a
+                href="https://github.com/AvivLugasi/Information-Retrival-System/blob/75fc8e1f07f38253ad84ca203e106648552362ad/ArtificialIntelligenceExplainability/text/DARPA%E2%80%99s%20Explainable%20Artificial%20Intelligence%20Program.txt">Discover
+                the objects and features in the image using Explainable
+                AI Techniques.</a>
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Field Data is an incredible source of information to validate
+              earth observation studies. Recently with the success of
+              Convolution Neural Networks in Feature Extraction from Satellite
+              Images, there is a need to standardize and generate training
+              datasets. This Field Datasets will be of high value in terms of
+              the research and development in Space Applications. It is felt
+              that catalogue of field data and AI based solution to discover
+              the objects or features will be a milestone during India’s Self
+              Reliance Journey in Geospatial Sector. For d
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">5</td>
+            <td class="second">Rohan</td>
+            <td class="third">
+              <a
+                href="https://github.com/search?q=HERITAGE+Identification+of+monuments+using+Deep+Learning+Techniques&ref=simplesearch">HERITAGE
+                Identification of monuments using Deep Learning
+                Techniques</a>
+            </td>
+            <td class="fourth">Django,SQL,HTML,CSS</td>
+            <td class="fifth">
+              To identify the monuments from Satellite Images using Deep
+              Learning and Integration of Interpretability for the predicted
+              outcomes (Explainable AI).
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">6</td>
+            <td class="second">Pa1 Kalyan</td>
+            <td class="third">
+              <a href="https://github.com/CodeUpJewell/Weather-APP-HTML-CSS-JS-v2">Weather
+                Forecast and its Visualization using Augmented Reality
+                (AR)</a>
+            </td>
+            <td class="fourth"> HTML, CSS, MongoDB</td>
+            <td class="fifth">
+              Utilization of AR technologies for effective distribution of
+              weather forecast. AR to enhance information dissemination with
+              better interactivity and user engagement.
+            </td>
+            <td class="sixth">Web App</td>
+          </tr>
+
+          <tr>
+            <td class="first">7</td>
+            <td class="second">Haish</td>
+            <td class="third">
+              <a href="https://github.com/search?q=+Cloud+data+and+its+3D+%27&ref=simplesearch">Pseudo height assignment
+                to INSAT 3D/3DR Cloud data and its 3D
+                visualization on Web</a>
+            </td>
+            <td class="fourth">Python GUI, MongoDB</td>
+            <td class="fifth">
+              The INSAT-3D/3DR spacecraft (parked at 82° East and 74° East
+              respectively) carries two meteorological payloads: (i) IMAGER
+              working from the visible to the infrared spectral bands (0.55 to
+              12.5 µm) and (ii) SOUNDER working in 18 IR (7 in LWIR,5 in
+              MWIR,6 in SWIR) channels and one in Visible spectral range.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">8</td>
+            <td class="second">Veer</td>
+            <td class="third">
+              <a href="https://github.com/search?q=Deep+Learning+based+Cyclone+Inte&ref=simplesearch">Deep Learning
+                based Cyclone Intensity estimation using INSAT-3D
+                IR imagery</a>
+            </td>
+            <td class="fourth">React,MySQL</td>
+            <td class="fifth">
+              One of the major uses of Navigation based application is
+              Location-Based Services (LBS) which constitutes a significant
+              portion of the navigation application usage.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">9</td>
+            <td class="second">Brahmah</td>
+            <td class="third"><a>Seamless indoor-outdoor navigation</a></td>
+            <td class="fourth">Django,SQL,HTML,CSS</td>
+            <td class="fifth">
+              One of the major uses of Navigation based application is
+              Location-Based Services (LBS) which constitutes a significant
+              portion of the navigation application usage. The availability of
+              location-sensitive smartphones, with wireless broadband
+              high-speed connections, has made low-cost applications available
+              to a huge audience and there exists a lot of innovation in
+              designing new type of technology and applications using these
+              devices. Typically, it is seen that outdoor positioning is
+              generally GPS/GNSS based. However, indoor positioning is
+              generally based on WLAN technology.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">10</td>
+            <td class="second">Ram</td>
+            <td class="third">
+              <a>Processing, visualization and application development of raw
+                GNSS data on Android Smartphones</a>
+            </td>
+            <td class="fourth">Flutter,Python APIs</td>
+            <td class="fifth">
+              some of the advanced smartphone chipsets now supports L5 band
+              also. Along with this a major development has happened wherein
+              the android has enabled access to raw GNSS data also. This opens
+              up enormous opportunity to develop newer smartphone based GNSS
+              applications enabling accuracy and integrity, which was not
+              possible earlier.
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">11</td>
+            <td class="second">Sai Tej</td>
+            <td class="third">
+              <a>Android application for the imaging possibilities by an Earth
+                observing satellite</a>
+            </td>
+            <td class="fourth">React-native,NoSQL</td>
+            <td class="fifth">
+              These days almost every android smartphone includes a GNSS
+              sensor. Increasingly this GNSS sensor supports hosts of GNSS
+              constellation like GPS, Galileo, Beidou, Glonass, QZSS and
+              NavIC. Until now, the smartphone GNSS chipsets were operating on
+              single frequency at L1 only. However, some of the advanced
+              smartphone chipsets now supports L5 band also. Along with this a
+              major development has happened wherein the android has enabled
+              access to raw GNSS data also. This opens up enormous opportunity
+              to develop newer smartphone based GNSS applications enabling
+              accuracy and integrity, which was not possible earlier. This
+              problem statement deals with the processing and visualization of
+              such raw GNSS observable from the android devices.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">12</td>
+            <td class="second">Nikhil</td>
+            <td class="third"><a>Multispectral satellite image dehazing</a></td>
+            <td class="fourth">Python GUI, MongoDB</td>
+            <td class="fifth">
+              Given a multispectral image, dehazing tries to improve
+              interpret-ability in the image regions affected by the presence
+              of haze during acquisition. For datasets and additional
+              information
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">13</td>
+            <td class="second">Salman</td>
+            <td class="third">
+              <a>Water Quality from Mobile captured and Google earth images</a>
+            </td>
+            <td class="fourth">HTML, CSS, PHP</td>
+            <td class="fifth">
+              Color of the water is result of solar radiation interaction with
+              water constituents and its concentration. The changing
+              watercolor is direct indicator of changing water parameters and
+              its suitability of usage. Measurement of water leaving radiance
+              in visible region and its transformation to hue angle do provide
+              necessary water parameters. Development of App for measurement
+              of Water Quality using smartphone. For datasets and additional
+              information
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">14</td>
+            <td class="second">Teja</td>
+            <td class="third"><a>Flood inundation probability mapping</a></td>
+            <td class="fourth">React,MySQL</td>
+            <td class="fifth">
+              Development of image processing-based approach to estimate flood
+              inundation probability by utilizing multiple satellite images
+              form microwave and optical sensors. For datasets and additional
+              information
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">15</td>
+            <td class="second">Raju</td>
+            <td class="third"><a>Natural Language search tool for Web GIS</a></td>
+            <td class="fourth">Flutter</td>
+            <td class="fifth">
+              To design and develop a Natural language-based search system for
+              searching about attribute/information about datasets/features in
+              a web GIS using open source tools and libraries
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">16</td>
+            <td class="second">Varun</td>
+            <td class="third">
+              <a>Producing Super Resolution Digital Elevation Models from low
+                resolution DEMs</a>
+            </td>
+            <td class="fourth">Python GUI, MongoDB</td>
+            <td class="fifth">
+              DEMs could be produced from different sources. Satellite
+              stereoscopy has its own advantages over other techniques.
+              However, there are certain theoretical limitations in producing
+              DEMs from a certain resolution stereo data. Here the idea is to
+              train a machine with some super resolution DEM samples and use
+              the model for generating super resolution elsewhere.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">17</td>
+            <td class="second">Aamir</td>
+            <td class="third">
+              <a>Software toolset for storage browsing and permission based
+                access to geospatial data using blockchain</a>
+            </td>
+            <td class="fourth">HTML, CSS, PHP</td>
+            <td class="fifth">
+              Ever-growing geospatial data requires secure and scalable
+              storage for archiving data. Block chain-based technologies can
+              offer strong byzantine fault tolerance and distributed data
+              storage and access. However currently there are no mature
+              options for storing and organizing large geospatial datasets on
+              a distributed blockchain.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">18</td>
+            <td class="second">Preeti</td>
+            <td class="third">
+              <a>Fully automated seamless on-the-fly mosaicking of satellite
+                images</a>
+            </td>
+            <td class="fourth">React,MySQL</td>
+            <td class="fifth">
+              Fully automated seamless on-the-fly mosaicking of satellite
+              images
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">19</td>
+            <td class="second">Xena</td>
+            <td class="third">
+              <a>Prediction of TEC variations with Artificial Intelligence using
+                Space Weather Data as input</a>
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Background: High resolution imaging satellites have limited
+              swath and images from adjacent passes are stitched together,
+              However, theme images may have different illumination and
+              atmospheric conditions leading to a visible differences at the
+              border of images. The goal of this problem statement is to
+              develop a fully automated algorithm to automatically stitch
+              adjacent ( multiple ) satellite images without human
+              intervention to create a seamless mosaic. The algorithm needs to
+              be fast enough for on-the-fly stitching for web based
+              visualization.
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">20</td>
+            <td class="second">Vishwa</td>
+            <td class="third">
+              <a>Prediction of TEC variations with Artificial Intelligence using
+                Space Weather Data as input</a>
+            </td>
+            <td class="fourth">react js</td>
+            <td class="fifth">
+              The ionospheric electron density is sensitive to the space
+              weather parameters like Sunspot numbers, F10.7, Interplanetary
+              magnetic field etc. and shows variation with respect to them.
+              These parameters are detected and measured at L1 point
+              (currently by ESA / NASA satellites) and are transmitted to
+              earth. So, the information about these parameters are available
+              before they actually influence the terrestrial ionosphere.
+              Importantly, all these data are freely available over internet.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">21</td>
+            <td class="second">Rosie</td>
+            <td class="third">
+              <a>Fully automated seamless on-the-fly mosaicking of satellite
+                images</a>
+            </td>
+            <td class="fourth">React,MySQL</td>
+            <td class="fifth">
+              Realization of high accuracy navigation system using NavIC/GNSS
+              and other augmentation systems (i.e. integrating optical
+              cameras, INS, odometer, radars); which can provide decimeter
+              level positioning and manage lane-level navigation. For datasets
+              and additional information
+            </td>
+            <td class="sixth">Windows App</td>
+          </tr>
+
+          <tr>
+            <td class="first">22</td>
+            <td class="second">Natasha</td>
+            <td class="third"><a>Symbol Rate/Bandwidth Estimation</a></td>
+            <td class="fourth">React, Python, Django</td>
+            <td class="fifth">
+              To design and develop signal processing algorithm (Matlab/C
+              based Code) for spectrum monitoring and Estimation of Symbol
+              Rate / Bandwidth together with centre frequency of the modulated
+              signal. The estimation is expected to achieve accuracy of order
+              of Hz. The input may have multiple communication channels and
+              bandwidth/symbol rate of each channel has to be estimated within
+              specified bandwidth. A typical 10 MHz bandwidth may be
+              considered for simulation. For datasets and additional
+              information
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">23</td>
+            <td class="second">Steeve</td>
+            <td class="third">
+              <a>Real-Time Adaptive Speech Mixing and Audio-video synchronization</a>
+            </td>
+            <td class="fourth">React,MySQL</td>
+            <td class="fifth">
+              Content adaptive speech mixing and audio-video synchronization
+              is a challenge task in building audio-video conference system
+              for Gaganyaan Project. To achieve clear and distinguishable
+              audio, the audio mixing should be done based on adaptive
+              acoustic modeling. Characteristics of speech such as pitch,
+              formant frequencies, and segmental durations related to specific
+              age group or gender should be adapted.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">24</td>
+            <td class="second">Harward</td>
+            <td class="third">
+              <a>Traffic Light Negotiation and Perception-Based Detection</a>
+            </td>
+            <td class="fourth">Flutter</td>
+            <td class="fifth">
+              Identify the color of the traffic light using camera output and
+              perception. Control the change of state of the traffic light
+              using Stateflow. The ego-vehicle should react to the traffic
+              light information. Build your own scenes with the following
+              suggested requirements and perform a quantitative analysis of
+              your algorithm: a. Traffic lights obstructed by trees b. Various
+              types of traffic lights like hanging on a pole, multiple traffic
+              lights in different orientations at an intersection c. Scenes
+              with different weather conditions Work with Automated Driving
+              Toolbox™ , Computer Vision Toolbox™ , Lidar Toolbox™ and Sensor
+              Fusion and Tracking Toolbox™
+              https://www.mathworks.com/products/sensor-fusion-and-tracking.html
+              for this project. Students can also take the opportunity of
+              submitting the solution to the MathWorks Excellence in
+              Innovation Projects and get recognized for their work.
+              Deliverables Software (Models, Code, Simulation Data, 3D files)
+              License: For students whose institutions/university already have
+              access to MATLAB, SIMULINK and its toolboxes, please use of
+              these licenses. To check if your campus has a MATLAB campus
+              license? Check the following link For those whose
+              institutions/university, do not have access to MATLAB, SIMULINK
+              and its toolboxes.
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">25</td>
+            <td class="second">Roohi and Justice Chowdary</td>
+            <td class="third"><a>Bulk email and SMS service</a></td>
+            <td class="fourth">smtblib,python Faster APIs</td>
+            <td class="fifth">
+              "Background: Information sharing is a major factor for
+              development in the country. It is a time taking process to share
+              information to all the citizens of the country through media and
+              newspaper. In this modern generation almost everyone has a
+              mobile phone in their hand. We can use this opportunity to share
+              information directly to them through SMS or email. This will
+              save time and money and information can be shared with a larger
+              community within short time duration. Also such service can be
+              used to repeatedly send SMS in case of emergency situations.
+            </td>
+            <td class="sixth">Windows App</td>
+          </tr>
+
+          <tr>
+            <td class="first">26</td>
+            <td class="second">Tony</td>
+            <td class="third"><a>AI based Chatbot to answer FAQs</a></td>
+            <td class="fourth">Python GUI, MongoDB</td>
+            <td class="fifth">
+              "Background: There have always been queries of people regarding
+              various topics to which answers are provided manually by people.
+              In order to make this process fast the FAQs can be answer using
+              the latest AI technologies where answers can be automatically
+              generated according to the questions. Also for every question
+              asked it can be stored and the list of questions can be
+              increased to provide better mapping of question and answers.
+              This process can reduce lot of work pressure for both the
+              consumer and the government.
+            </td>
+            <td class="sixth"></td>
+          </tr>
+
+          <tr>
+            <td class="first">27</td>
+            <td class="second">Paulette</td>
+            <td class="third"><a>Energy Conservation with modern technology</a></td>
+            <td class="fourth">Flutter</td>
+            <td class="fifth">
+              Background: The world’s natural resources are already depleting,
+              and people are starting to feel the repercussions of a wasteful
+              lifestyle. As such, energy conservation is vital in today’s
+              world. Not only does it help households save money, but it also
+              encourages consumers to be more conscious about preserving
+              natural resources. IoT has made homes smarter, so its
+              application in energy conservation is more accessible.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">28</td>
+            <td class="second">Jessica</td>
+            <td class="third"><a>Graphical Password Authentication</a></td>
+            <td class="fourth">React,MySQL</td>
+            <td class="fifth">
+              Passwords are ubiquitous today on any platform, on possibly any
+              website. But to remember so difficult passwords and that too on
+              numerous websites seems daunting and therefore you can devise a
+              project illustrating graphical password strategy. This will
+              allow the user to set passwords in the form of graphical
+              presentation in a certain pattern and later use that pattern to
+              login o the system.
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">29</td>
+            <td class="second">Liliana</td>
+            <td class="third"><a>Network Traffic Analyzer</a></td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Also called “Packet Sniffing”, network traffic analysis and
+              monitoring is a process used to keep an eye on all incoming and
+              outgoing traffic, network activity, and availability. It is used
+              to detect anomalies, identifying operational issues, comparing
+              real-time networks with historical data to identify potential
+              threats and issues. For a project, you can analyze the data
+              packets that are sent across the network. After analyzing these
+              packets you can work on a report to give your insights, and if
+              required, countermeasures if there is an anomaly.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">30</td>
+            <td class="second">Zarina</td>
+            <td class="third"><a></a>Software for easing government procurements</td>
+            <td class="fourth">Python GUI, MongoDB</td>
+            <td class="fifth">
+              Government purchases various components through tender which
+              takes a lot of time as the process of allocation of tender takes
+              more than 2 months. Often it is observed after allocation of
+              tender the fulfillment of the required tender takes more than
+              required time. From tender allocation to tender completion it
+              takes more than 6 months to complete all the process as
+              government itself have to compare all the required items.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">31</td>
+            <td class="second">Yohanna</td>
+            <td class="third">
+              <a></a>AI based tool to get information about 5 good institutes based
+              on AISHE
+            </td>
+            <td class="fourth">Flutter</td>
+            <td class="fifth">
+              India as we know is a densely populated country and Every year
+              more than 6 crores of Indians graduates from diverse backgrounds
+              and with diversity in education. Almost similar number of
+              students enter into colleges for taking various education to
+              help them in seeking jobs. With the advent of time technology
+              and the requirement of job sector has changed drastically as
+              compared to 10 years back.
+            </td>
+            <td class="sixth">Windows App</td>
+          </tr>
+
+          <tr>
+            <td class="first">32</td>
+            <td class="second">Niocola</td>
+            <td class="third">
+              <a>AICTE Event/Activity (Workshops, Talks, FDP, Meeting etc)
+                management system.</a>
+            </td>
+            <td class="fourth">React, Python, SQL</td>
+            <td class="fifth">
+              Currently in AICTE Event/Activity Management happens manually.
+              Such examples of activities that happen manually are Booking of
+              meeting room/auditorium, communication to all the
+              bureaus/members regarding meetings through email and SMS alerts,
+              intimate canteen for refreshment/Lunch/dinner arrangements,
+              update the information on AICTE social media like Facebook &
+              Twitter page, Report generation, activity log checking etc. This
+              manual process generally takes a lot of time to implement and
+              can cause delay to the actual work.
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">33</td>
+            <td class="second">Shadab</td>
+            <td class="third"><a>Career dendrogram</a></td>
+            <td class="fourth">HTML, CSS, PHP</td>
+            <td class="fifth">
+              In order to realise the goal of demographic divide, every
+              citizen of the country needs to be educated for job, be it a
+              scientist, a doctor, engineer or whatever to meet not only the
+              needs of our society but also the other societies elsewhere in
+              the world. Every student aspires to become a great person and
+              self reliant, but their passion and likings are diverse. In
+              order to cater to the aspirations of the students and facilitate
+              them to aim it high, they are required to be informed about the
+              number and type of jobs this country has in the future years, as
+              also the number of business persons, entrepreneurs, workforce in
+              all areas of employment.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">34</td>
+            <td class="second">Katie</td>
+            <td class="third">
+              <a>Lack of information about Academic Activities in single platform</a>
+            </td>
+            <td class="fourth">React,MySQL</td>
+            <td class="fifth">
+              We need you to develop a portal where information about all
+              academic activities across the country, universities and
+              international arena in chronological order and in subject areas
+              so as to enable the students, faculty, and researchers to access
+              information and prepare well in advance and participate
+              effectively and successfully.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">35</td>
+            <td class="second">Molly</td>
+            <td class="third">
+              <a>Lack of sustainability in appointment of Faculty in Higher
+                Educational Institutions and Colleges</a>
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Retirement of faculties and appointment of faculties in colleges
+              is not standardised in our country. While retirements are
+              mandatory on superannuation, steps to fill up the vacancy that
+              arises immediately is lacking. When a vacancy arises in the
+              middle of the academic year on account of the superannuation of
+              a faculty, the students are the victims.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">36</td>
+            <td class="second">Paloma</td>
+            <td class="third">
+              <a>Portal to know about various National and International
+                scholarships</a>
+            </td>
+            <td class="fourth">Flutter</td>
+            <td class="fifth">
+              India as we know is a densely populated country and every year
+              more than 6 crores of Indians graduates from diverse backgrounds
+              and with diversity in education. Almost similar number of
+              students enter into colleges for taking various education to
+              help them in seeking jobs. With time students also look for good
+              scholarships based on the merit, skills, income, etc. Getting
+              scholarships would help such students to even excel more.
+              Summary: With growing technology and market scholarships in the
+              market is also increasing but is the data is not confined to one
+              place. People have to find various places to check for good
+              scholarships. Addressing this problem will help in knowing
+              various national and international scholarships. ALos it will
+              encourage students to increase their merit to get such
+              scholarships for better future. Objective: : We need you to
+              develop a portal where various National and International
+              scholarships based on merit, study field, income etc. are shown
+              up. This should be a real time data management which should be
+              updated with the latest scholarships that are being offered."
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">37</td>
+            <td class="second">Nancy</td>
+            <td class="third">
+              <a>Prediction of Admission & Jobs in Engineering & Technology with
+                respect to demographic locations</a>
+            </td>
+            <td class="fourth">HTML, CSS, PHP</td>
+            <td class="fifth">
+              Prediction of Admission & Jobs in Engineering & Technology with
+              respect to demographic locations
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">38</td>
+            <td class="second">Renee</td>
+            <td class="third">
+              <a>To develop in integrated and robust online platform for the
+                researchers providing the information and relevant details about
+                national/international research grants</a>
+            </td>
+            <td class="fourth">Flutter</td>
+            <td class="fifth">
+              India as we know is a densely populated country and Every year
+              more than 6 crores of Indians graduates from diverse backgrounds
+              and with diversity in education. Almost similar number of
+              students enter into colleges for taking various education to
+              help them in seeking jobs.With the advent of time technology and
+              the requirement of job sector has changed drastically as
+              compared to 10 years back.Many sectors have experienced
+              tremendous growth in employment and thus masses opt for those
+              sectors whereas in many sectors there is huge unemployment
+              either due to low jobs availability or demand of skilled workers
+              is required.
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">39</td>
+            <td class="second">Noah</td>
+            <td class="third">
+              <a>Integrated information platform for information about Indian
+                Universities</a>
+            </td>
+            <td class="fourth">React, Python, MySQL</td>
+            <td class="fifth">
+              There are more than 1000 universities in India and these
+              universities are offering thousands of undergraduate,
+              post-Graduate and doctorate courses. The students applying for
+              these universities have to do a lot of comparison for choosing
+              the university/course on the basis of various criteria’s. A PAN
+              India university information bank is required for accessing
+              course details, comparison of courses, facilities and faculty,
+              admission, tracking student mobility, viewing results,
+              evaluation and certification, verification of certificates,
+              joint online courses (MOOCs). This will help both student and
+              faculty communities for self improvement through comparison and
+              emulations. Lack of information is leading to self glorification
+              and inbreeding among University and College student and faculty
+              members. Summary: The universities in India provide various
+              courses on different disciplines and the students have to
+              compare these courses on the basis of various parameters.
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+          <tr>
+            <td class="first">40</td>
+            <td class="second">Levi</td>
+            <td class="third">
+              <a>Integrated annual academic calendar for all the Indian
+                universities</a>
+            </td>
+            <td class="fourth">React, Python, MySQL</td>
+            <td class="fifth">
+              Due to the autonomy given to then Indian Universities, These
+              institutions have developed their own annual academic calendars.
+              The students wanting to get admissions in other institutions
+              need to wait for the results of the previous course. Students of
+              those Institutions who complete their examinations and get
+              results early have the opportunity to select the course of their
+              choice and move to the University of choice while those whose
+              results are declared late have no (Or) less options of courses
+              and colleges available for them.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">41</td>
+            <td class="second">Zahid Parvez</td>
+            <td class="third">
+              <a>Online integrated platform for projects taken up by the students
+                of various universities/colleges.</a>
+            </td>
+            <td class="fourth">HTML, CSS, PHP</td>
+            <td class="fifth">
+              An integrated platform should be developed where in all the
+              universities/Colleges provide information about the projects
+              done by the students. The information on this platform will help
+              in the peer learning and this will also help in cross functional
+              research between various universities/colleges. Objective: : To
+              develop an online integrated platform for projects taken up by
+              the students of various universities/colleges
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">42</td>
+            <td class="second">Bruce</td>
+            <td class="third">
+              <a>Inter-linked platform for Campus Placement in Higher educational
+                Institutions of India</a>
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To develop an inter-linked platform for Campus Placement in
+              Higher educational Institutions of India"
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">43</td>
+            <td class="second">Odin</td>
+            <td class="third">
+              <a>Interlinked platform for School education, Higher education and
+                Technical education in India</a>
+            </td>
+            <td class="fourth">Flutter</td>
+            <td class="fifth">
+              To develop an Interlinked platform for School education, Higher
+              education and Technical education in India"
+            </td>
+            <td class="sixth"></td>
+          </tr>
+
+          <tr>
+            <td class="first">44</td>
+            <td class="second"></td>
+            <td class="third">
+              <a>Conversational Chatbot Builder - Smarter Virtual Assistants with
+                Domain specific AI</a>
+            </td>
+            <td class="fourth"></td>
+            <td class="fifth">
+              A conversational chatbot builder to enable no-code template
+              based chatbot for troubleshooting questions, trainings, problem
+              diagnostics. Ability for adapting chatbot of multi-domains will
+              ensure the value for all Social innovation programs Expanding
+              this by using BERT based models to make it more natural feeling
+              like while conversing. Context specific BERT models can add
+              value for healthcare, education based applications
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">45</td>
+            <td class="second">Loki</td>
+            <td class="third"><a>A Mobile App for AICTE</a></td>
+            <td class="fourth">Flutter, Python, MongoDB</td>
+            <td class="fifth">
+              Mobile application development for the AICTE for providing the
+              relevant information to the concerned stake holders will result
+              in: 1. Easy access to information 2. User Friendly Mode
+              Objective: : To develop a Mobile App for AICTE" Data-
+              www.aicte-india.org & Statistics > Dash board
+            </td>
+            <td class="sixth">Mobile App</td>
+          </tr>
+
+          <tr>
+            <td class="first">46</td>
+            <td class="second">Christopher</td>
+            <td class="third"><a>Centralized grievance system portal</a></td>
+            <td class="fourth">Django,SQL,HTML,CSS</td>
+            <td class="fifth">
+              At our technical helpdesk, we are facing a problem regarding
+              remotely access the institution PC for assist institutes to
+              resolve the technical issues. If possible, there should be a
+              platform which should be available on AICTE portal or
+              centralized grievance system portal like any desk or team viewer
+              through which we can easily and securely access the Institute PC
+              with the permission of institutes representatives
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">47</td>
+            <td class="second">Doltans</td>
+            <td class="third"><a></a>AICTE TASK Management Mobile Application</td>
+            <td class="fourth">Flutter</td>
+            <td class="fifth">AICTE TASK Management Mobile Application</td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">48</td>
+            <td class="second">William</td>
+            <td class="third">
+              <a>Geotagging of all educational institutions integrated with
+                virtual tour on Bharat Map so that any students/parents can
+                visit any part of the country on map and take virtual tour along
+                with facilities/courses available across the country.</a>
+            </td>
+            <td class="fourth">HTML, CSS, PHP</td>
+            <td class="fifth">
+              Geotagging of all educational institutions integrated with
+              virtual tour on Bharat Map so that any students/parents can
+              visit any part of the country on map and take virtual tour along
+              with facilities/courses available across the country.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">49</td>
+            <td class="second">Dennis</td>
+            <td class="third"><a>One Point Student Verification</a></td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              There is a requirement of a single comprehensive mobile
+              application which uses modern technology to for automating AICTE
+              approval processes for schemes, training, VC, Fellowship and the
+              office work automation and meetings to be integrated within app
+              are some of the basic requirements. The list of things that can
+              be automated is huge and with modern technology can be explored
+              and innovated
+            </td>
+            <td class="sixth"></td>
+          </tr>
+
+          <tr>
+            <td class="first">50</td>
+            <td class="second">Bathini Ajay Goud Hero</td>
+            <td class="third"><a>Damaged Road Detections</a></td>
+            <td class="fourth">Python, OpenCV, smtplib library</td>
+            <td class="fifth">
+              Real-Time email report automatically to be sent to officer by the website
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">51</td>
+            <td class="second">Zakari</td>
+            <td class="third">
+              <a>Prediction of Admission & Jobs in Engineering & Technology
+                /Management/Pharmacy with respect to demographic locations</a>
+            </td>
+            <td class="fourth">React,MySQL</td>
+            <td class="fifth">
+              Modern era AI and computing systems can be employed to help in
+              the process and any significant innovation in this field is
+              highly appreciated which considers multiple factors and
+              forecasts the admissions and jobs sector scenarios. There is a
+              need to forecast the current trend in the admissions and job
+              sectors so as to blend the courses and syllabus accordingly to
+              keep the youth employed and skilled with rapidly changing world
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">52</td>
+            <td class="second">King Tachala</td>
+            <td class="third"><a>Security Management System</a></td>
+            <td class="fourth">Django,SQL,HTML,CSS</td>
+            <td class="fifth">
+              Security Management System and its requirement in todays time is
+              widely understood from the fact that people throughout the
+              country have started opting for CCTV cameras in their home,
+              offices and business. Although only the CCTV systems are not
+              enough as criminals take advantage of blackouts (zones which are
+              not covered by cameras) and enter the premise. Also in many
+              cases it was found that criminals disrupted the power supply to
+              the CCTV cameras or destroyed the cameras thus leaving no trace
+              of the crime they committed.
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">53</td>
+            <td class="second">Shuri</td>
+            <td class="third">
+              <a>Standard Course Curriculum Design for all the Universities
+                across India</a>
+            </td>
+            <td class="fourth">Python GUI, MongoDB</td>
+            <td class="fifth">
+              India as we know is a densely populated country and Every year
+              more than 6 crores of Indians graduates from diverse backgrounds
+              and with diversity in education. Almost similar number of
+              students enter into colleges for taking various education to
+              help them in seeking jobs. With the advent of time technology
+              and the requirement of job sector has changed drastically as
+              compared to 10 years back. However we still follow the same
+              curriculum designed years back as per the need then.
+            </td>
+            <td class="sixth">Windows App</td>
+          </tr>
+
+          <tr>
+            <td class="first">54</td>
+            <td class="second">Matthew</td>
+            <td class="third"><a>Diet Recall</a></td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              A diet recall is a dietary assessment tool that consist of a
+              structured interview in which participants are asked to recall
+              all food and drink they have consumed in the previous 24/7 days
+              etc.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">55</td>
+            <td class="second">Levi</td>
+            <td class="third">
+              <a>Work clothing that has sensors embedded in it to securely
+                transmit data to managers about hazardous conditions and the
+                workers physical conditions, improving safety overall</a>
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To give a solution to design smart work clothing that has
+              sensors embedded in it to securely transmit data to managers
+              about hazardous conditions and the workers’ physical conditions,
+              improving safety overall.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">56</td>
+            <td class="second">Matthew</td>
+            <td class="third">
+              <a>Prototype of a Solar Powered IOT Device with the ability to
+                connect to a smart network to be used in Geo Tagging of Physical
+                Assets Created under CSR</a>
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To give a software and a hardware solution that can identify,
+              track and monitor the progress of the project on a real time
+              basis. The solution should also have the capability to store a
+              databank of all the assets created and give the analytics from
+              the same
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">57</td>
+            <td class="second">Mahesh Babu</td>
+            <td class="third">Moving vehicle registration plate detection</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To create an anti-theft auto security system that can extract
+              registration number from number plate of moving vehicle. And can
+              capture and transfer data to cloud, which can be available for
+              further analysis of theft or proof readingA diet recall is a
+              dietary assessment tool that consist of a structured interview
+              in which participants are asked to recall all food and drink
+              they have consumed in the previous 24/7 days etc.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">58</td>
+            <td class="second">Shahank</td>
+            <td class="third">
+              A system of IoT devices to measure load weight in a dumper
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              The object is to provide a solution to measure the load weight
+              of the dumper using IoT technology. The solution should give
+              dynamic measurements based of coal loaded into the dumper which
+              will help stop overloading of the dumper and hence mitigate the
+              risks of fatal accidents
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">59</td>
+            <td class="second">Yadav</td>
+            <td class="third">Smart Buffer Stock Solution</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              to create buffer stock of onions in the harvest season and keep
+              the buffer stock intact with its food value, moisture and taste
+              for at least a period of six months from date of storage. We
+              would want the technical solution to be proposed for the
+              following:- (a (a) Storage of onions in the traditional storage
+              systems and warehouses available in the country. (b) Technical
+              solutions for storage of onions in temperature controlled
+              storage systems, warehouses
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">60</td>
+            <td class="second">Madhu</td>
+            <td class="third">Virtual Visit to Indian pilgrimages</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To develop a single virtual platform having live 360 visuals of
+              famous pilgrimages of India will help these devotees Objective:
+              § To bring forward the culture of India to the rest of the world
+              § Make sure users stay emotionally connected with their deity
+              even in COVID induced lockdown.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">61</td>
+            <td class="second">Jayanth NSUI</td>
+            <td class="third">AR App showcasing Turbans of India</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To value and preserve the rich heritage of our Indian culture. §
+              To document the different types of turbans in India. § Encourage
+              use of different types of turbans in various events
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">62</td>
+            <td class="second">Allu Arjun</td>
+            <td class="third">
+              OCR and Fastest Scanning Device and Application
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Digitization of enormous amount of text and documents is
+              necessary at huge pace to keep them from damage and making them
+              available for upcoming generations who might loose interest or
+              get totally disconnected with the texts if they are not
+              accessible while relevant.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">63</td>
+            <td class="second">Prabhas</td>
+            <td class="third">Hologram with Speech Synthesis</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Popularity of museums and knowledge dissemination will grow
+              significantly if visitors get a personalized tour and guidance.
+              Visitors should be guided in most efficient and interesting ways
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">64</td>
+            <td class="second">Nagarjuna</td>
+            <td class="third">Augmented Reality Classroom Programme</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Augmented reality models can be attached to a book. It will help
+              provide an enhanced and expanded view of three-dimensional
+              heritage properties and art by expanding the model in space. ?
+              It can assist students learn more about India and its rich
+              culture and heritage by using picture tracking and a simple
+              visual animation technique.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">65</td>
+            <td class="second">N T Rama Rao Jr</td>
+            <td class="third">Digital Reconstruction of Monuments</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To create a digital reconstruction of the monuments from the
+              existing picture to predict how it was in the past. Objective: ?
+              To preserve our cultural heritage for future generations. ? It
+              is essential that damaged and dilapidated historic monuments and
+              artefacts are accurately documented, and that steps are taken to
+              improve user experiences by means of digital reconstruction
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">66</td>
+            <td class="second">Messi</td>
+            <td class="third">
+              Ticketless Entry System to Monuments/Museums
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To devise a QR based ticketing system with necessary hardware
+              for the seamless visitor experience in Museums/Heritage sites.
+              In addition, The prediction of the expected crowd should be
+              added as a feature.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">67</td>
+            <td class="second">Ronaldo</td>
+            <td class="third">3D Planetarium Software</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To develop an indegenous 3D planetarium software.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">68</td>
+            <td class="second">Prahas</td>
+            <td class="third">AR App for Monuments</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To develop an AR application for visitors so that they can scan
+              any area in a monument and can see history come alive through
+              augmented animations.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">69</td>
+            <td class="second">Suhas</td>
+            <td class="third">Virtual Excavation Game</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To develop a virtual excavation 3D game for students to excavate
+              sites, learn about objects excavated and also develop your
+              virtual museum.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">70</td>
+            <td class="second">Rana Yedava</td>
+            <td class="third">E-commerce for Artisans</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              To develop an exclusive e-commerce platform for artisans to sell
+              their products. The demand forecast of the items required,
+              automatic quality checks on the items as well as Sentiment
+              analysis with next recommendation actions for the artist shall
+              be added.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">71</td>
+            <td class="second">Pavan Kalyan</td>
+            <td class="third">
+              Tracing IP address and details of unidentified participants
+              while academic sessions.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Covid Pandemic /Lockdown has resulted in frustrations among
+              students,It has affected their mental health as well, resulting
+              in unwanted behaviours and activities which disturbs the whole
+              class, and the decorum of the session/academic activities. The
+              links for academic sessions/webinars/CREs are shared by a few
+              students to miscreants, who then login into the meeting/sessions
+              using the same link by using IDs or names of other identified
+              participants. After login into the meeting,
+              miscreant/mischievous students create indiscipline, confusion
+              and use foul abusive languages to disturb the whole meeting.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">72</td>
+            <td class="second">Konda Vijay</td>
+            <td class="third">
+              Accessing visual information (written information) by persons
+              with visual disability.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              The provision of information materials to persons with visual
+              impairment has remained worrisome to producers and providers of
+              alternative formats.Summary: The Internet and the World Wide Web
+              have significantly increased the ease of access to information
+              resources for people with disabilities due to the flexibility of
+              use and the provision of assistive technologies such as screen
+              readers for people who are BVI.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">73</td>
+            <td class="second">Chiru</td>
+            <td class="third">
+              Enabling communication strategies for persons with hearing
+              impairment.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              .The main barrier to communication for people who are hearing
+              impaired is the lack of consideration by others. 2.There is an
+              urgent requirement to include all humans into the society as per
+              the ratification of the UNCRPD act.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">74</td>
+            <td class="second">Srinivas Sai </td>
+            <td class="third">
+              Enabling alternative accessible strategies for persons with
+              speech impairment.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Many people with hearing loss/ speech disability experience a
+              drop in self-esteem and confidence because of their impaired
+              ability to communicate with other people. Having difficulties in
+              speaking can also limit one’s ability to learn and speak a new
+              language; it is crucial that alternative accessibility solutions
+              are provided to ensure these persons use good communication
+              strategies.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">75</td>
+            <td class="second">Nageshwar Rao</td>
+            <td class="third">
+              Development of easy operating systems for persons with locomotor
+              disability.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Persons with disabilities continue to face barriers that prevent
+              them from enjoying their full civil, political, economic,
+              social, cultural and developmental rights. Mainstreaming and
+              universal access for persons with disabilities are the ultimate
+              goals of the disability movement.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">76</td>
+            <td class="second">Mohan Babu</td>
+            <td class="third">
+              DEVELOPMENT & IMPLEMENTATION OF AN INTEGRATED WEB-BASED OFFICE
+              DOCUMENT MANAGEMENT SYSTEM
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              The physical movement of such files/ documents has many
+              disadvantages. When a document file is under process of
+              approval, the location of the file document where it has been
+              delayed on the way while moving from table to table, is very
+              difficult to trace.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">77</td>
+            <td class="second">Lakshmi</td>
+            <td class="third">
+              DEVELOPMENT OF A WEB-BASED PLATFORM & MOBILE APP FOR STORING &
+              SHARING INFORMATION ABOUT ACCESSIBLE BUILDINGS/ OFFICES/ PUBLIC
+              PLACES/ BUS STOPS/ RAILWAYS/ MARKETPLACE SCHOOLS ETC.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Web-Based solution widely accessible for storing and sharing
+              information about buildings/offices/schools/marketplace
+              etc.Summary: Presently, we can get a lot of information on a
+              map-based platform using a PC or a mobile app. Examples of such
+              apps are Ola & Uber showing taxi locations, Zomato & Swiggy
+              showing restaurant locations and Google maps showing
+              restaurants, filling stations, hotels etc.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">78</td>
+            <td class="second">Vishnu</td>
+            <td class="third">
+              Difficulties to understand the concept in Math & Science for
+              visual impaired person.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              A simple solution to make tactile diagrams which will help a
+              visually impaired person to understand complex concepts.Summary:
+              Due to the problem in vision the persons are unable to see the
+              Pictorial diagram published in the book which are essential to
+              understand the concepts in a proper way specially in the case of
+              Math & Science.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">79</td>
+            <td class="second">Manoj</td>
+            <td class="third">
+              Comprehensive tools to edit the pdf and convert into epub
+              format.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Simple tool that will be more accessible for impaired readers.
+              They function better with screen reading software.Summary: Such
+              kinds of facilities are not available or not integrated in a
+              single tool. Most of them are highly paid software, which are
+              not easily affordable by every person.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">80</td>
+            <td class="second">Adivi Sesh</td>
+            <td class="third">
+              IoT based solution for recording and storing metrics of normal
+              and orthotic leg for analysis by Orthotist.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              A practical challenge faced in the field of assistive devices
+              and orthotics is to measure real time efficiency of the device
+              when fitted on the patient, such that the orthotist can better
+              suggest the exercises/changes in gait to the patient.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">81</td>
+            <td class="second">Aadi</td>
+            <td class="third">
+              Using depth sensors or computer vision in prosthetic lower
+              extremity exoskeleton appliance to alert or adjust gait.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Background: Lower extremity exoskeleton prosthetic devices today
+              not only need to provide active control, but alert and support
+              the leg when the patient traverses an uneven surface like a
+              pothole. Summary: These exoskeletons assist/replace the impaired
+              parts of the users, allowing users to live/behave like healthy
+              people while wearing the devices. For this type of exoskeleton,
+              precise position control with electrical motors is the most
+              common combination.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">82</td>
+            <td class="second">Sai Kumar</td>
+            <td class="third">
+              App for registration of Persons with Disabilities under ADIP
+              scheme
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              ADIP Scheme is being implemented by different agencies for
+              Persons with Disabilities across India. However, a national
+              portal regarding the latest ADIP beneficiary details is not
+              available. Presently, there is no software application to
+              register Persons with Disabilities (PwDs) for receiving Aids and
+              appliances under ADIPS scheme.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">83</td>
+            <td class="second">Naresh</td>
+            <td class="third">
+              Optimal design of Silo for bulk storage of Rice
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Pain Points : a) Rice continues to be majorly stored in the
+              traditional storage godow’ns as stacks in gunny bags. This
+              requires manual handling of bags and the process is also subject
+              to losses during storage. b) Technical challenges in storing the
+              rice in bulk due to the very nature of the commodity, is a major
+              roadblock. c) Since, the rice-ielated operations of FCI form a
+              major part of the overall scale of operations, non-use of Silos
+              for storing rice does not allow tor leveragtng the efficiencies
+              of bulk storage. d) The Silos take significantly lower space for
+              storing the food grains, which can be a special advantage.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">84</td>
+            <td class="second">Siddharth</td>
+            <td class="third">
+              Good quality of food/fresh food which can be stored using latest
+              technology
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              The tinned/dehydrated food being used by troops at border has
+              its draw backs as it produces gas and abdominal discomfort.
+              Latest technology may be explored to address to this problem of
+              storage and production of fresh vegetables at high altitude.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">85</td>
+            <td class="second">Ramana</td>
+            <td class="third">
+              All weather good quality clothing for troops
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Special Uniform for Tropical area:- ITBP Troops are deployed in
+              ANO area where troops face harsh weather: mostly high
+              temperature, mosquito and snakes. Some technology in field of
+              clothing or equipment may be explored to address his problem
+              which can rectify this problem or may suppress the harm. Special
+              Uniform for High Altitude area:- Troops are deployed in such
+              area where temperature dip down up to -40° C, in such areas
+              troops are facing high altitude diseases i.e Frost bite,
+              Chilblains, loss of appetite, headache. Latest technology in rlo
+              clothing may explored to overcome this problem or suppress
+              impact of such adverse weather on human body.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">86</td>
+            <td class="second">hari shankar</td>
+            <td class="third">Devlop a Ready to use first aid kits</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Until evacuation to higher centre, patient is dependent on first
+              aid by medic/telemedicine. However, good quality, easy to use
+              first aid kits might be life savior in times of crisis. Oxygen
+              related problems:- Troops are deployed in high altitude area
+              where oxygen level is very low which can affect the physical
+              efficiency of troops.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">87</td>
+            <td class="second">Jagan</td>
+            <td class="third">
+              A mobile app for PIB with engaging features for direct outreach
+              to the people.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              A real-time and one-stop solution for the latest information
+              about the Government may be developed. The app may support
+              various multimedia formats such as text, video, and audio. The
+              app may be customized to the language of choice of the user, and
+              his/her topics of interest. Mechanism for real-time notification
+              may be provided.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">88</td>
+            <td class="second">Rahul</td>
+            <td class="third">Smart Manufacturing</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Computer-Aided Manufacturing (CAM) is the use of software and
+              computer-controlled machinery to automate a manufacturing
+              process. Based on that definition, you need three components for
+              a CAM system to function: Software that tells a machine how to
+              make a product by generating toolpaths. Machinery that can turn
+              raw material into a finished product.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">89</td>
+            <td class="second">Mohan Das</td>
+            <td class="third">
+              Require Crime Predictive model/tool for hotspot mapping
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Explanation Mapping of hotspots/zones where e a particular crime
+              is more prevalent Some of the categories for classification
+              (input category being criminal Explanation sections) Indian
+              Penal Code, NDPS Act, Gambling Act, Arms Act, Mineral and Mining
+              Act, Immoral Traffic Prevention Act, Goonda Act.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">90</td>
+            <td class="second">Vishwak</td>
+            <td class="third">Layering of Bank accounts</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              During criminal investigation, Law agencies come across
+              different bank accounts. There is need of a mechanism which can
+              help to integrate different bank accounts into layers.
+              Expectation There are multiple accounts being provided by banks
+              in form of excel sheets and pdfs but this solution must be able
+              to link all the data and present it in a well organised and
+              layered format Extension Sorting of data into District and
+              Police Station wise. Then an inter linkages be established with
+              different bank data linked with each other.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">91</td>
+            <td class="second">Sree Vishnu</td>
+            <td class="third">smart and sustainable supply chain</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              SDG target 12.3 seeks by 2030. halve per capita global food
+              plastic at the retail and consumer level and reduce food losses
+              along production and supply chains including post harvest
+              losses"
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">92</td>
+            <td class="second">Sudheer Babu</td>
+            <td class="third">
+              An online website and app based solution that compares various
+              requirements for Government jobs, as are advertised in the
+              Employment News weekly published by Publications Division with
+              various fields
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              A diet recall is a dietary assessment tool that consist of a
+              structured interview in which participants are asked to recall
+              all food and drink they have consumed in the previous 24/7 days
+              etc.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">93</td>
+            <td class="second">Shaban babu</td>
+            <td class="third">
+              "Require Automated Smart Data Collection System. "
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Data is manually entered through the portal which results into
+              delays, discrepancies and mistakes. A smart system should be
+              developed that can do the following: - Validates that data is
+              correct - Free of mistakes - Sends timely reminderss
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">94</td>
+            <td class="second">Varun Tej</td>
+            <td class="third">
+              Monitoring & optimization of Bandwidth provisioned to the court
+              complexes
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              As part of eCourt Mission mode project, Internet connectivity is
+              provided to the court complexes. Due to the load on these
+              internet systems, it is leading into congestion and decrease in
+              the speed of the internet. A Software/algorithm should be
+              developed to provide prioritization to different kind of users
+              and work so that right people and systems get right speed and
+              non-priority work can be completed during non-peak hours
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">95</td>
+            <td class="second">Krishnam Raju</td>
+            <td class="third">
+              Monitoring & optimization of Bandwidth provisioned to the court
+              complexes
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Courts are getting many cases and currently it is becoming
+              challenging to prioritize those cases. A software/algorithm
+              should be developed for prioritizing and allocations of dates to
+              the cases based on the following parameters: - Time of filing of
+              chargesheet - Severity of the crime and sections involved - Last
+              hearing date - Degree of responsibility of the alleged
+              perpetrators System should be free of impartiality
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">96</td>
+            <td class="second">Nithin</td>
+            <td class="third">
+              Devlop a Software for Categorization of cases.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Courts are getting many cases and currently it is becoming
+              challenging to prioritize those cases. A software/algorithm
+              should be developed for prioritizing and allocations of dates to
+              the cases based on the following parameters: - Time of filing of
+              chargesheet - Severity of the crime and sections involved - Last
+              hearing date - Degree of responsibility of the alleged
+              perpetrators System should be free of impartiality .
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">97</td>
+            <td class="second">Bramhi Darling</td>
+            <td class="third">
+              Training of all levels of court staff on PAN India basis
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              There are many people (staff) which works in courts. These
+              people are not been able to function properly due to lack of
+              trainings. A training software or platform should be developed
+              with the following features: - training different types of
+              resources - Access anywhere and anytime - Accessible through
+              laptop, desktop, mobile or other computing devices - Should
+              suggest right kind of trainings based on the user role,
+              experience, and expertise
+            </td>
+            <td class="sixth">WebApp</td>
+          </tr>
+
+          <tr>
+            <td class="first">98</td>
+            <td class="second">Dr. Rajasekhar</td>
+            <td class="third">
+              Composite database for cases filed at all levels of judiciary
+              and tribunals
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Many times same cases are filed in multiple courts. A
+              software/algorithm should be developed which can identify same
+              case filed in different courts based on the following
+              parameters: - Attach Aadhar card of the perpeterators -
+              Jurisdiction of the police - Name and identification of the
+              incharge of the case - and so on This will help combine these
+              multiple cases into one and save precious time of the court
+              resulting into the efficiency of the court
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">99</td>
+            <td class="second">Vaishnaw Tej</td>
+            <td class="third">
+              Training of all levels of court staff on PAN India basis
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              There are many people (staff) which works in courts. These
+              people are not been able to function properly due to lack of
+              trainings. A training software or platform should be developed
+              with the following features: - training different types of
+              resources - Access anywhere and anytime - Accessible through
+              laptop, desktop, mobile or other computing devices - Should
+              suggest right kind of trainings based on the user role,
+              experience, and expertise
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">100</td>
+            <td class="second">raj tharun</td>
+            <td class="third">Diet Recall</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              A diet recall is a dietary assessment tool that consist of a
+              structured interview in which participants are asked to recall
+              all food and drink they have consumed in the previous 24/7 days
+              etc.
+            </td>
+            <td class="sixth">IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">101</td>
+            <td class="second">Matthew</td>
+            <td class="third">
+              IoT enabled risk monitoring svstem in Cold Suppll Chain
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Monitoring temperature, humidity and other gas compositions in
+              cold storagc are in built and automated in large cornmercial
+              premises. However, monitoring the real time location,
+              temperature and other parameteE need a cost effective system
+              which may be integrated by GPS, remote sensors, cloud computing
+              and big data
+            </td>
+            <td class="sixth">Android</td>
+          </tr>
+
+          <tr>
+            <td class="first">102</td>
+            <td class="second">Matthew</td>
+            <td class="third">Diet Recall</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              A diet recall is a dietary assessment tool that consist of a
+              structured interview in which participants are asked to recall
+              all food and drink they have consumed in the previous 24/7 days
+              etc.
+            </td>
+            <td class="sixth">Hardware</td>
+          </tr>
+
+          <tr>
+            <td class="first">103</td>
+            <td class="second">Matthew</td>
+            <td class="third">
+              To provide solution for entire year commercial solar drying of
+              food commodities.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Solar trackers are rising in popularity, but everyone
+              understands the complete benefits and potential drawbacks of the
+              system. Solar panel tracking solutions are a more
+              advancedtechnology for monitoring photovoltaic panels.
+              Stationary mounts. which hold panels in a fixed position, can
+              handle their productility compromised when the sun passes to a
+              less-than-optimal angle. compensating for this- solar tracker
+              automatically move to 'tack'' the progress ofthe sun across the
+              sky. thereby maximizing output.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">104</td>
+            <td class="second">Matthew</td>
+            <td class="third">
+              Solution to Identify Drones through CCTV feeds installed at
+              houses, roads etc.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              While Drones are poised to fuel new use cases and economy, they
+              also pose security threats. Due to small Radar Cross Section, it
+              is not easy to detect them through conventional Radars. An
+              economic solution such as detection of Drones through CCTV feeds
+              in real time is very useful to protect our establishments and
+              sensitive areas.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">105</td>
+            <td class="second">Rani</td>
+            <td class="third">
+              Speed measurement of autonomous underwater vehicles
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              At present, there is no way to measure the speed of underwater
+              vehicles directly. Indirect measurements are done such as
+              measurement of propeller shaft rpm or speed estimated by
+              Inertial Navigation System (which actually measures
+              accelerations and integrates to get velocity, which induces
+              error in velocity estimates with time). Instruments such as
+              Doppler Velocity Logs are used by few vehicles to estimate
+              vehicle velocity by Doppler shift; however, DVL operations are
+              noisy and limited to shallow waters.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">106</td>
+            <td class="second">Matthew_12</td>
+            <td class="third">
+              To strengthen the skills for managing negative emotions of self
+              and others effectively.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              1. Understanding and managing negative emotions towards self 2.
+              Understanding and managing negative emotions towards others 3.
+              Understanding the context and situation and acting appropriately
+              Strategies to overcome these challenges 1. Managing anger and
+              aggression a. Towards self i. Relaxation techniques ii.
+              Cognitive restructuring b. Towards others i. Think before you
+              speak ii. Better communication iii. Cognitive reappraisal c.
+              Towards the environment i. Pause and reflect
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">107</td>
+            <td class="second">Matthew</td>
+            <td class="third">
+              To maintain and enjoy healthy relationships with others.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              1. Developing effective communication skills 2. Developing
+              interpersonal skills 3. Developing empathy (perspective taking)
+              4. Accepting and respecting others Ways to nurture positive
+              relationships
+            </td>
+            <td class="sixth">S/w IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">108</td>
+            <td class="second">Srikanth</td>
+            <td class="third">
+              To maintain and enjoy healthy relationships with others.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              1.Developing effective communication skills 2. Developing
+              interpersonal skills 3. Developing empathy (perspective taking)
+              4. Accepting and respecting others Ways to nurture positive
+              relationships
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">109</td>
+            <td class="second">Suman</td>
+            <td class="third">
+              To enhance concentration among students for better performance
+              in the given task.
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              Concentration is the ability to focus on the task at hand while
+              ignoring the object distractions in the environment. Sub themes
+              1. Identifying the reasons for lack of concentration 2. Steps to
+              enhance concentration Ways to enhance concentration
+            </td>
+            <td class="sixth">Software</td>
+          </tr>
+
+          <tr>
+            <td class="first">110</td>
+            <td class="second">Sivaji</td>
+            <td class="third">Diet Recall</td>
+            <td class="fourth">Reactjs,Python APIs</td>
+            <td class="fifth">
+              A diet recall is a dietary assessment tool that consist of a
+              structured interview in which participants are asked to recall
+              all food and drink they have consumed in the previous 24/7 days
+              etc.
+            </td>
+            <td class="sixth">Web App</td>
+          </tr>
+
+          <tr>
+            <td class="first">111</td>
+            <td class="second">Rukmini</td>
+            <td class="third">Diet Recall</td>
+            <td class="fourth">Angular,Python APIs</td>
+            <td class="fifth">
+              A diet recall is a dietary assessment tool that consist of a
+              structured interview in which participants are asked to recall
+              all food and drink they have consumed in the previous 24/7 days
+              etc.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">112</td>
+            <td class="second">ramya</td>
+            <td class="third">Diet Management</td>
+            <td class="fourth">Dart,Python APIs</td>
+            <td class="fifth">
+              A diet recall is a dietary assessment tool that consist of a
+              structured interview in which participants are asked to recall
+              all food and drink they have consumed in the previous 24/7 days
+              etc.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">113</td>
+            <td class="second">jhansi</td>
+            <td class="third">Diet Recall</td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              A diet recall is a dietary assessment tool that consist of a
+              structured interview in which participants are asked to recall
+              all food and drink they have consumed in the previous 24/7 days
+              etc.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">114</td>
+            <td class="second">sri sri</td>
+            <td class="third">
+              To develop self-awareness to realize the full potential for
+              holistic functioning of students across age groups.
+            </td>
+            <td class="fourth">hardware</td>
+            <td class="fifth">
+              Self-awareness is being aware of various aspects of
+              self-including their, behaviors, feelings and habits. It is a
+              psychological state where the individual becomes their own focus
+              of attention. Sub-themes : Understanding one’s 1. Strength and
+              developing them
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">115</td>
+            <td class="second">Jadeja</td>
+            <td class="third">
+              Common EDI Mode for all the Ports and Terminals
+            </td>
+            <td class="fourth">React-Native,Python APIs</td>
+            <td class="fifth">
+              The PCS 1x platform is an open platform for all the modes of
+              integrations. At present, across all Ports and Terminals and
+              other custodians has different modes of integration with lack of
+              standardization. In all the Port, Terminals, and other
+              custodians are using the integration format such as Text, XML,
+              API. Some of the Ports, Custodians and Terminals does not have
+              any mode of integration available which hamper the
+              implementation/integration of/with PCS 1x..
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+
+          <tr>
+            <td class="first">116</td>
+            <td class="second">Raina</td>
+            <td class="third">Lack of uniform GIS system at Ports</td>
+            <td class="fourth">hardware</td>
+            <td class="fifth">
+              All major ports in India have implemented GIS in their
+              individual capacities and have mapped either wholly or partially
+              their physical and land assets on GIS through the on boarded
+              vendor. These GIS systems work in siloes with no interconnection
+              across systems.
+            </td>
+            <td class="sixth">Android IOS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

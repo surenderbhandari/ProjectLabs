@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  accent-color: #314AE7;
+  font-family: 'Inter', sans-serif;
+}
+
+.app_container {
+  height: 100vh;
+  width: 80%;
+  display: grid;
+  grid-auto-rows: 64px 64px 1fr;
+  grid-auto-columns: 220px 1fr;
+  padding-top: 50px;
+  padding-right: 50px;
+}
+
+nav {
+  grid-column: 2 / 3;
+  display: flex;
+  padding-inline: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+#table {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  text-align: left;
+  height: 500px;
+  border-radius: 8px 8px 8px 8px;
+  padding-right: 30%;
+  width: 140%;
+}
+
+tbody {
+  overflow-y: auto;
+}
+
+tbody::-webkit-scrollbar {
+  display: none;
+}
+
+thead > tr {
+  border-radius: 8px 8px 0px 0px;
+  font-weight: bold;
+  color: #f26507;
+  background-color: black;
+  font-style: italic;
+  font-family: sans-serif;
+  border-top: 2px solid #f26507;
+}
+
+tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid #f26507;
+  margin-top: -1px;
+  color: white;
+  background-color: rgb(41, 33, 33);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+thead {
+  /* background-color: white; */
+  border-radius: 8px 8px 0px 0px;
+}
+
+tbody tr:hover {
+  background-color: darkorange;
+  cursor:pointer;
+  color:black;
+}
+
+.first {
+  width: 20px;
+  padding-left: 23px;
+  align-items: left;
+}
+
+.second {
+  min-width: 8%;
+  align-items: left;
+}
+
+.third {
+  width: 24%;
+}
+
+.fourth {
+  width: 120px;
+}
+
+.fifth {
+  width: 24%;
+  text-align: left;
+}
+
+.sixth {
+  min-width: 92px;
+}
+
+
+@media screen and (max-width: 960px) {
+  .app_container {
+    grid-auto-columns: 1fr;
+    
+  }
+  
+  .side-nav {
+    display: none;
+  }
+  
+  table, nav, header {
+  grid-column: 1 / 3;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .third, .fourth, .avatars, .fifth{
+    display: none;
+  }
+}
